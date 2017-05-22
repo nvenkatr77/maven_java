@@ -10,7 +10,7 @@ pipeline {
       steps {
         parallel(
           "mvn compile": {
-            sh 'mvn clean compile package'
+            sh 'clean compile package'
             
           },
           "mvn deploy": {
