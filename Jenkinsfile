@@ -10,10 +10,10 @@ pipeline {
       steps {
         parallel(
           "mvn compile": {
-            sh 'clean compile package'
+            sh 'mvn clean compile package'
             
           },
-          "mvn deploy": {
+          "mvn nexus deploy": {
             sh 'mvn deploy'
             
           }
